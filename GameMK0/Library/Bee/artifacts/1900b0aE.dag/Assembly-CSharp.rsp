@@ -375,6 +375,7 @@
 "Assets/MK0Scripts/MKItemCollector.cs"
 "Assets/MK0Scripts/MKPlayerLife.cs"
 "Assets/MK0Scripts/MkPlayerMovement.cs"
+"Assets/MK0Scripts/MKRotate.cs"
 "Assets/MK0Scripts/MKStickyPlatform.cs"
 "Assets/MK0Scripts/MKWayPointFollower.cs"
 -langversion:9.0
