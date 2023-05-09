@@ -5,7 +5,9 @@ ScriptsOnlyBuild:
     - MKFinish
     - MKItemCollector
     - MKPlayerLife
+    - MKRestart
     - MKRotate
+    - MKSoundActivation
     - MKStartMenu
     - MKStickyPlatform
     - MKWayPointFollower
@@ -63,11 +65,29 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
+    fullTypeName: MKEndMenu
+    methodName: Quit
+  - assembly: Assembly-CSharp
     fullTypeName: MKStartMenu
     methodName: StartGame
   - assembly: Assembly-CSharp
+    fullTypeName: MKSoundActivation
+    methodName: ToggleAudio
+  - assembly: Assembly-CSharp
     fullTypeName: MKEndMenu
     methodName: Quit
+  - assembly: Assembly-CSharp
+    fullTypeName: MKEndMenu
+    methodName: Quit
+  - assembly: Assembly-CSharp
+    fullTypeName: MKSoundActivation
+    methodName: ToggleAudio
+  - assembly: Assembly-CSharp
+    fullTypeName: MKEndMenu
+    methodName: Quit
+  - assembly: Assembly-CSharp
+    fullTypeName: MKRestart
+    methodName: RestartGame
   sceneClasses:
     Assets/Scenes/MK0EndScreen.unity:
     - Class: 1
@@ -87,21 +107,23 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1610}
+      Script: {instanceID: 1558}
     - Class: 114
-      Script: {instanceID: 2764}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 2998}
+      Script: {instanceID: 3002}
     - Class: 114
-      Script: {instanceID: 3332}
+      Script: {instanceID: 3338}
     - Class: 114
-      Script: {instanceID: 5988}
+      Script: {instanceID: 5994}
     - Class: 114
-      Script: {instanceID: 6342}
+      Script: {instanceID: 6348}
     - Class: 114
-      Script: {instanceID: 6924}
+      Script: {instanceID: 6930}
     - Class: 114
-      Script: {instanceID: 32734}
+      Script: {instanceID: 7818}
+    - Class: 114
+      Script: {instanceID: 9036}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -152,33 +174,41 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 668}
+      Script: {instanceID: 670}
     - Class: 114
-      Script: {instanceID: 2764}
+      Script: {instanceID: 1558}
     - Class: 114
-      Script: {instanceID: 2838}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 2972}
+      Script: {instanceID: 2842}
     - Class: 114
-      Script: {instanceID: 2998}
+      Script: {instanceID: 2976}
     - Class: 114
-      Script: {instanceID: 4046}
+      Script: {instanceID: 3002}
     - Class: 114
-      Script: {instanceID: 5512}
+      Script: {instanceID: 3338}
     - Class: 114
-      Script: {instanceID: 5988}
+      Script: {instanceID: 4052}
     - Class: 114
-      Script: {instanceID: 6342}
+      Script: {instanceID: 5518}
     - Class: 114
-      Script: {instanceID: 6506}
+      Script: {instanceID: 5994}
     - Class: 114
-      Script: {instanceID: 6828}
+      Script: {instanceID: 6348}
     - Class: 114
-      Script: {instanceID: 6924}
+      Script: {instanceID: 6512}
     - Class: 114
-      Script: {instanceID: 7082}
+      Script: {instanceID: 6834}
     - Class: 114
-      Script: {instanceID: 8472}
+      Script: {instanceID: 6930}
+    - Class: 114
+      Script: {instanceID: 7088}
+    - Class: 114
+      Script: {instanceID: 7752}
+    - Class: 114
+      Script: {instanceID: 8482}
+    - Class: 114
+      Script: {instanceID: 9036}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -241,33 +271,41 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 668}
+      Script: {instanceID: 670}
     - Class: 114
-      Script: {instanceID: 2764}
+      Script: {instanceID: 1558}
     - Class: 114
-      Script: {instanceID: 2838}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 2972}
+      Script: {instanceID: 2842}
     - Class: 114
-      Script: {instanceID: 2998}
+      Script: {instanceID: 2976}
     - Class: 114
-      Script: {instanceID: 4046}
+      Script: {instanceID: 3002}
     - Class: 114
-      Script: {instanceID: 5512}
+      Script: {instanceID: 3338}
     - Class: 114
-      Script: {instanceID: 5988}
+      Script: {instanceID: 4052}
     - Class: 114
-      Script: {instanceID: 6342}
+      Script: {instanceID: 5518}
     - Class: 114
-      Script: {instanceID: 6506}
+      Script: {instanceID: 5994}
     - Class: 114
-      Script: {instanceID: 6828}
+      Script: {instanceID: 6348}
     - Class: 114
-      Script: {instanceID: 6924}
+      Script: {instanceID: 6512}
     - Class: 114
-      Script: {instanceID: 7082}
+      Script: {instanceID: 6834}
     - Class: 114
-      Script: {instanceID: 8472}
+      Script: {instanceID: 6930}
+    - Class: 114
+      Script: {instanceID: 7088}
+    - Class: 114
+      Script: {instanceID: 7752}
+    - Class: 114
+      Script: {instanceID: 8482}
+    - Class: 114
+      Script: {instanceID: 9036}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -314,21 +352,23 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1602}
+      Script: {instanceID: 1558}
     - Class: 114
-      Script: {instanceID: 1610}
+      Script: {instanceID: 1606}
     - Class: 114
-      Script: {instanceID: 2764}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 2998}
+      Script: {instanceID: 3002}
     - Class: 114
-      Script: {instanceID: 3332}
+      Script: {instanceID: 3338}
     - Class: 114
-      Script: {instanceID: 5988}
+      Script: {instanceID: 5994}
     - Class: 114
-      Script: {instanceID: 6342}
+      Script: {instanceID: 6348}
     - Class: 114
-      Script: {instanceID: 6924}
+      Script: {instanceID: 6930}
+    - Class: 114
+      Script: {instanceID: 9036}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -348,6 +388,12 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
+      Hash: a6e561615949734e9f12f9b61661f43e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UIElements
@@ -358,12 +404,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MKStartMenu
-  - hash:
-      serializedVersion: 2
-      Hash: a6e561615949734e9f12f9b61661f43e
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Image
   - hash:
       serializedVersion: 2
       Hash: 61f2059db36c32396c3d12077855592b
@@ -430,6 +470,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnDropMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 9bd3cfb1bd6e9e43c0399580a7832726
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MKHideButtons
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -592,6 +638,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 75f37fedfe216674d5506b76a2194568
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MKToggleBool
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1164,6 +1216,12 @@ ScriptsOnlyBuild:
     className: UnityOnScrollRectValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 08c5f73f781f3a3703ad0346d69e9a19
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MKSoundActivation
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -1174,6 +1232,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: EventTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 7b389f0e510d9215bc4ca0d61ba7fb16
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MKRestart
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1308,6 +1372,12 @@ ScriptsOnlyBuild:
     className: UnityOnMouseEnterMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MKEndMenu
+  - hash:
+      serializedVersion: 2
       Hash: ec4c1d7d9fe98434976788ebc4ee261e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1324,16 +1394,10 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MKEndMenu
   platform: 19
   scenePathNames:
   - Assets/Scenes/MK0StartScreen.unity
   - Assets/Scenes/MK0Level 1.unity
   - Assets/Scenes/MK0Level 2.unity
   - Assets/Scenes/MK0EndScreen.unity
-  playerPath: C:/Users/Usuario/Documents/REPOSITORIOS/RepGameMK0/GameMK0.exe
+  playerPath: C:/Users/Usuario/Documents/REPOSITORIOS/Builds/Fede'sFirstGame/Pc/V5-Pc/Fede'sFirstGame.exe

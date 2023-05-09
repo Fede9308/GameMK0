@@ -11,8 +11,10 @@ public class MKPlayerLife : MonoBehaviour
     [SerializeField] private AudioSource deathSoundEffect;
     private void Start()
     {
+       
         anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();   
+        rb = GetComponent<Rigidbody2D>();
+        
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -33,5 +35,6 @@ public class MKPlayerLife : MonoBehaviour
     private void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 }
